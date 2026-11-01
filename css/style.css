@@ -1,0 +1,1260 @@
+:root {
+  --lime: #cbfe1c;
+  --green: #0bdf72;
+  --bg: #0b0e13;
+  --border: #1c222b;
+  --muted: #9aa3b2;
+  --circle-border: #364153;
+
+  --font-heading: "Orbitron", sans-serif;
+  --font-body: "Bai Jamjuree", sans-serif;
+
+  --nav-h: 84px;
+}
+
+/* ---------- الأساسيات ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: var(--font-body);
+}
+
+.text-lime {
+  color: var(--lime);
+}
+
+
+/* ---------- الأزرار ---------- */
+.ga-btn {
+  font-family: var(--font-body);
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.ga-btn-primary {
+  background: var(--lime);
+  color: var(--bg);
+  border-color: var(--lime);
+}
+
+.ga-btn-primary:hover,
+.ga-btn-primary:focus {
+  background: #b5e617;
+  border-color: #b5e617;
+  color: var(--bg);
+}
+
+.ga-btn-outline {
+  background: transparent;
+  color: var(--lime);
+  border-color: var(--lime);
+}
+
+.ga-btn-outline:hover,
+.ga-btn-outline:focus {
+  background: var(--lime);
+  color: var(--bg);
+  border-color: var(--lime);
+}
+
+.ga-btn-sm {
+  padding: 0.7rem 1.4rem;
+  font-size: 1.05rem;
+}
+
+.ga-btn-lg {
+  padding: 1.35rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- النافبار ---------- */
+.ga-navbar {
+  min-height: var(--nav-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.ga-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.45rem;
+  color: var(--lime);
+}
+
+.ga-brand,
+.ga-brand:hover {
+  color: var(--lime);
+  text-decoration: none;
+}
+
+.ga-brand i {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.ga-nav-links {
+  gap: 0.4rem;
+  margin-left: 2rem;
+}
+
+.ga-nav-links .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.ga-nav-links .nav-link:hover,
+.ga-nav-links .nav-link.active {
+  color: var(--lime);
+}
+
+.ga-icon-link {
+  color: #fff;
+  font-size: 1.25rem;
+  transition: color 0.2s ease;
+}
+
+.ga-icon-link:hover {
+  color: var(--lime);
+}
+
+.navbar-toggler {
+  border-color: var(--circle-border);
+}
+
+
+/* ---------- الهيرو ---------- */
+.ga-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-h) + 3rem) 0 5rem;
+  background:
+    linear-gradient(rgba(11, 14, 19, 0.9), rgba(11, 14, 19, 0.9)),
+    url("../assets/images/hero-bg.jpg") center / cover no-repeat;
+}
+
+.ga-hero>.container {
+  position: relative;
+}
+
+.ga-hero-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 4.6vw, 4.5rem);
+  line-height: 1.3;
+  margin-bottom: 2.5rem;
+}
+
+.ga-hero-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 720px;
+  margin-bottom: 2.25rem;
+  color: #f1f3f5;
+}
+
+.ga-hero-visual {
+  position: relative;
+}
+
+.ga-hero-frame {
+  padding: 4px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--lime), var(--green));
+}
+
+.ga-hero-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.475 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.ga-stat-card {
+  position: absolute;
+  left: -30px;
+  bottom: -30px;
+  background: var(--bg);
+  border: 1px solid #2a313c;
+  border-radius: 12px;
+  padding: 1.5rem 1.9rem;
+}
+
+.ga-stat-card i {
+  font-size: 1.9rem;
+  color: var(--lime);
+  line-height: 1;
+}
+
+.ga-stat-card small {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.ga-stat-card strong {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+
+/* ---------- حاجات مشتركة بين السكاشن (العنوان الصغير والعنوان الكبير) ---------- */
+.ga-section {
+  padding: 7rem 0 8rem;
+  scroll-margin-top: -0.5rem;
+}
+
+.ga-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+  color: var(--lime);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.ga-eyebrow::before,
+.ga-eyebrow::after {
+  content: "";
+  width: 75px;
+  height: 2px;
+}
+
+.ga-eyebrow::before {
+  background: linear-gradient(90deg, transparent, var(--lime));
+}
+
+.ga-eyebrow::after {
+  background: linear-gradient(270deg, transparent, var(--lime));
+}
+
+.ga-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 3.6vw, 3.5rem);
+  margin: 0.4rem 0 0;
+}
+
+/* ---------- كروت الألعاب ---------- */
+.ga-games-row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+
+.ga-game {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ga-game img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ga-game:hover img {
+  transform: scale(1.1);
+}
+
+.ga-game-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(203, 254, 28, 0.95) 0%, rgba(203, 254, 28, 0.55) 45%, rgba(203, 254, 28, 0.05) 100%);
+  transition: opacity 0.3s ease;
+}
+
+.ga-game:hover {
+  border-color: var(--lime);
+  box-shadow: 0 0 24px rgba(203, 254, 28, 0.18);
+}
+
+.ga-game:hover .ga-game-overlay {
+  opacity: 1;
+}
+
+.ga-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ga-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(11, 14, 19, 0.88);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ga-tags i {
+  color: var(--lime);
+  font-size: 0.75rem;
+}
+
+.ga-game-overlay h3 {
+  margin: 0;
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  max-width: 85%;
+}
+
+/* ---------- أزرار الـ Carousel ---------- */
+.ga-controls {
+  gap: 1.25rem;
+}
+
+.ga-controls .ga-btn-view {
+  margin-left: 1.25rem;
+}
+
+.ga-circle-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--circle-border);
+  color: #fff;
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.ga-circle-btn:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.ga-btn-view {
+  padding: 1.5rem 2.8rem;
+  font-size: 1.2rem;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   اللي بنقدّمه (What We Do)
+   ========================================================= */
+.ga-what {
+  padding-bottom: 7rem;
+  overflow: hidden;
+}
+
+.ga-what-head {
+  margin-bottom: 4.5rem;
+}
+
+.ga-title-lg {
+  font-size: clamp(1.7rem, 3.4vw, 4rem);
+  line-height: 1.12;
+  margin-top: 1rem;
+}
+
+.ga-title-strong {
+  display: block;
+  font-weight: 800;
+}
+
+.ga-title-light {
+  display: block;
+  font-weight: 500;
+}
+
+/* --- شبكة كروت الخدمات --- */
+.ga-services-row {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
+
+
+.ga-service,
+.ga-service-img {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ga-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #1a1a1a;
+  border: 1px solid #1e2939;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.ga-service h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.6vw, 1.5rem);
+  line-height: 1.45;
+  color: #f1f1f1;
+}
+
+.ga-service-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: #1e2939;
+  color: var(--lime);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* المثلثين اللي بيظهروا في الركن الفوقاني الشمال والتحتاني اليمين وقت الـ hover */
+.ga-service::before,
+.ga-service::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--lime);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ga-service::before {
+  top: 20px;
+  left: 20px;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  transform: translate(-12px, -12px);
+}
+
+.ga-service::after {
+  right: 20px;
+  bottom: 20px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  transform: translate(12px, 12px);
+}
+
+.ga-service:hover {
+  border-color: var(--lime);
+}
+
+.ga-service:hover .ga-service-icon {
+  background: var(--lime);
+  color: var(--bg);
+}
+
+.ga-service:hover::before,
+.ga-service:hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.ga-service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* --- الخط المنوّر --- */
+.ga-glow-line {
+  width: min(750px, 80%);
+  height: 4px;
+  margin: 3.5rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, transparent, var(--lime) 18%, var(--lime) 82%, transparent);
+  box-shadow: 0 0 28px 4px rgba(203, 254, 28, 0.55);
+}
+
+/* --- شريط الشعارات المتحرك --- */
+.ga-marquee {
+  --logo: 120px;
+  --logo-gap: 20px;
+  --set: calc(12 * (var(--logo) + var(--logo-gap)));
+  position: relative;
+  margin: 4.5rem 30px 0;
+  padding: 2rem 0;
+}
+
+.ga-marquee-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(1560px, 100%);
+  height: 410px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse closest-side,
+      rgba(203, 254, 28, 0.85) 0%,
+      rgba(203, 254, 28, 0.5) 45%,
+      rgba(203, 254, 28, 0.12) 80%,
+      rgba(203, 254, 28, 0) 100%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.ga-marquee-rows {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--logo-gap);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.ga-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  will-change: transform;
+}
+
+.ga-track li {
+  flex: 0 0 auto;
+  margin-right: var(--logo-gap);
+}
+
+.ga-track img {
+  display: block;
+  width: var(--logo);
+  height: var(--logo);
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/*   مدة اللفة كاملة */
+.ga-track-left {
+  animation: ga-scroll-left 5s linear infinite;
+}
+
+.ga-track-right {
+  animation: ga-scroll-right 35s linear infinite;
+}
+
+@keyframes ga-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-1 * var(--set)));
+  }
+}
+
+@keyframes ga-scroll-right {
+  from {
+    transform: translateX(calc(-1 * var(--set)));
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   فريق العمل (Our Team)
+   ========================================================= */
+.ga-team {
+  padding-bottom: 8rem;
+}
+
+.ga-team-head {
+  margin-bottom: 5rem;
+}
+
+.ga-subtitle {
+  margin: 1.4rem 0 0;
+  color: #99a1af;
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  letter-spacing: 0.02em;
+}
+
+.ga-team-row {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
+
+
+.ga-member {
+  position: relative;
+  aspect-ratio: 355 / 400;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #111;
+  isolation: isolate;
+}
+
+.ga-member img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.ga-member-gray {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: grayscale(1);
+  backdrop-filter: grayscale(1);
+  transition: height 0.6s ease;
+}
+
+.ga-member:hover .ga-member-gray {
+  height: 0;
+}
+
+.ga-member-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0 38px 28px 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0) 62%);
+}
+
+.ga-member-text {
+  min-width: 0;
+}
+
+.ga-member-text h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1rem, 1.7vw, 1.55rem);
+  line-height: 1.45;
+  color: #f1f1f1;
+}
+
+.ga-member-role {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #ccc;
+  transition: color 0.4s ease;
+}
+
+.ga-member-sub {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  color: #909090;
+}
+
+.ga-member-nick {
+  writing-mode: vertical-rl;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #ccc;
+  transition: color 0.4s ease;
+}
+
+.ga-member:hover .ga-member-role,
+.ga-member:hover .ga-member-nick {
+  color: var(--lime);
+}
+
+
+/* =========================================================
+   تواصل معانا (Contact Us)
+   ========================================================= */
+.ga-contact {
+  padding-bottom: 7rem;
+  background: linear-gradient(180deg, #101727 0%, #0d131d 100%);
+}
+
+.ga-contact-head {
+  margin-bottom: 5rem;
+}
+
+.ga-contact-row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 2rem;
+}
+
+
+.ga-contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+/* --- كروت بيانات التواصل --- */
+.ga-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: 190px;
+  padding: 40px;
+  background: #1e2939;
+  border-radius: 24px;
+}
+
+.ga-info-icon {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+}
+
+.ga-info-card h3 {
+  margin: 0.3rem 0 0.35rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #f1f1f1;
+}
+
+.ga-info-card p {
+  margin: 0;
+  color: #99a1af;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.ga-community {
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--lime), var(--green));
+  color: var(--bg);
+}
+
+.ga-community h3 {
+  margin: 0 0 1.1rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: var(--bg);
+}
+
+.ga-community p {
+  margin: 0 0 2rem;
+  font-size: 1.2rem;
+  color: var(--bg);
+}
+
+.ga-social {
+  display: flex;
+  gap: 20px;
+}
+
+.ga-social a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--lime);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: background-color 0.25s ease;
+}
+
+.ga-social a:hover {
+  background: rgba(11, 14, 19, 0.7);
+  color: var(--lime);
+}
+
+/* --- الفورم --- */
+.ga-form {
+  padding: 40px;
+  background: #1e2939;
+  border-radius: 24px;
+}
+
+.ga-form-title {
+  margin: 0 0 2rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: #f1f1f1;
+}
+
+.mb-form {
+  margin-bottom: 1.75rem;
+}
+
+.ga-form .row.mb-form {
+  margin-bottom: 1.75rem;
+}
+
+.ga-form .form-label {
+  margin-bottom: 0.65rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #f1f1f1;
+}
+
+.ga-form .form-control,
+.ga-form .form-select {
+  background-color: #364153;
+  border: 1px solid #4a5565;
+  border-radius: 8px;
+  color: #fff;
+  padding: 1rem 1.3rem;
+  font-size: 1.2rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ga-form .form-control::placeholder {
+  color: #8b95a6;
+  opacity: 1;
+}
+
+.ga-form .form-control:focus,
+.ga-form .form-select:focus {
+  background-color: #364153;
+  color: #fff;
+  border-color: var(--lime);
+  box-shadow: 0 0 0 1px var(--lime);
+}
+
+.ga-form textarea.form-control {
+  min-height: 182px;
+  resize: vertical;
+}
+
+.ga-check {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-left: 0;
+  margin-bottom: 1.9rem;
+}
+
+.ga-check .form-check-input {
+  float: none;
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ga-check .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.ga-check .form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.ga-check .form-check-label {
+  color: #99a1af;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.ga-send {
+  width: 100%;
+  padding: 1.3rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-family: var(--font-heading);
+}
+
+.ga-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2.5rem;
+  padding-top: 2.6rem;
+  border-top: 1px solid #364153;
+  text-align: center;
+}
+
+.ga-stats strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--lime);
+  line-height: 1.3;
+}
+
+.ga-stats span {
+  color: #99a1af;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   الفوتر
+   ========================================================= */
+.ga-footer {
+  background: #000;
+  padding: 5rem 0 4.5rem;
+  color: #99a1af;
+}
+
+.ga-footer-row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 2.5rem;
+}
+
+
+.ga-footer-text {
+  max-width: 350px;
+  margin: 2rem 0 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #99a1af;
+}
+
+.ga-footer-social {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.ga-footer-social a {
+  color: #99a1af;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.ga-footer-social a:hover {
+  color: var(--lime);
+}
+
+.ga-footer-title {
+  margin: 0 0 2rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #f1f1f1;
+}
+
+.ga-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ga-footer-links li {
+  margin-bottom: 1.1rem;
+}
+
+.ga-footer-links a {
+  color: #99a1af;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.ga-footer-links a:hover {
+  color: var(--lime);
+}
+
+.ga-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-top: 3.5rem;
+  padding-top: 2.6rem;
+  border-top: 1px solid #1e2939;
+}
+
+.ga-footer-bottom p {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #99a1af;
+}
+
+.ga-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 30px;
+}
+
+.ga-footer-legal a {
+  color: #99a1af;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.ga-footer-legal a:hover {
+  color: var(--lime);
+}
+
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1564px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ga-games-row {
+    --bs-gutter-x: 2.5rem;
+    --bs-gutter-y: 2rem;
+  }
+
+  .ga-services-row {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 30px;
+  }
+
+  .ga-team-row {
+    --bs-gutter-x: 40px;
+    --bs-gutter-y: 40px;
+  }
+
+  .ga-contact-row {
+    --bs-gutter-x: 40px;
+  }
+
+  .ga-contact-col {
+    gap: 40px;
+  }
+
+  .ga-footer-row {
+    --bs-gutter-x: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ga-contact-row {
+    --bs-gutter-x: 60px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ga-navbar .navbar-collapse {
+    padding: 1rem 0;
+  }
+
+  .ga-nav-links {
+    margin-left: 0;
+  }
+
+  .ga-hero {
+    text-align: center;
+  }
+
+  .ga-hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ga-hero .d-flex {
+    justify-content: center;
+  }
+
+  .ga-stat-card {
+    left: 10px;
+    bottom: -24px;
+    padding: 1rem 1.2rem;
+  }
+
+  .ga-service-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+  }
+
+  .ga-service {
+    gap: 1rem;
+    border-radius: 16px;
+  }
+
+  .ga-service-img {
+    border-radius: 16px;
+  }
+
+  .ga-service::before {
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ga-service::after {
+    right: 12px;
+    bottom: 12px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ga-member {
+    border-radius: 18px;
+  }
+
+  .ga-member-info {
+    padding: 0 16px 16px 14px;
+  }
+
+  .ga-member-text h3 {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .ga-member-role {
+    font-size: 0.8rem;
+  }
+
+  .ga-member-sub {
+    font-size: 0.7rem;
+  }
+
+  .ga-member-nick {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ga-circle-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.25rem;
+  }
+
+  .ga-btn-view {
+    padding: 1.1rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  .ga-marquee {
+    --logo: 90px;
+    --logo-gap: 14px;
+    margin: 4rem 12px 0;
+  }
+
+  .ga-marquee-glow {
+    height: 300px;
+  }
+
+  .ga-info-card {
+    gap: 16px;
+    padding: 24px;
+    min-height: 0;
+  }
+
+  .ga-info-icon {
+    flex-basis: 56px;
+    width: 56px;
+    height: 56px;
+    font-size: 1.3rem;
+  }
+
+  .ga-info-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .ga-info-card p, .ga-community p {
+    font-size: 1rem;
+  }
+
+  .ga-community, .ga-form {
+    padding: 24px;
+  }
+
+  .ga-social {
+    gap: 12px;
+  }
+
+  .ga-social a {
+    width: 52px;
+    height: 52px;
+    font-size: 1.25rem;
+  }
+
+  .ga-stats strong {
+    font-size: 1.5rem;
+  }
+
+  .ga-footer {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .ga-footer-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ga-footer-links a, .ga-footer-bottom p, .ga-footer-legal a {
+    font-size: 1rem;
+  }
+
+  .ga-footer-bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ga-track-left, .ga-track-right {
+    animation: none;
+  }
+
+  .ga-game img, .ga-member-gray {
+    transition: none;
+  }
+}

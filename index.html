@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games Arena</title>
+
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Orbitron:wght@500;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<!-- data-bs-spy: بيخلّي اللينك في النافبار يتلوّن بالأخضر لما توصل للسكشن بتاعه -->
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="0px 0px -25%" data-bs-smooth-scroll="true" tabindex="0">
+
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top ga-navbar">
+    <div class="container">
+      <a class="navbar-brand ga-brand d-flex align-items-center gap-2" href="#hero">
+        <i class="bi bi-controller"></i>
+        <span>GameArena</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ga-nav-links me-auto mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#latest-games">OUR GAMES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#what-we-do">What We Do</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-4">
+          <a href="#" class="ga-icon-link" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+          <a href="#" class="ga-icon-link" aria-label="Messages"><i class="bi bi-chat-square"></i></a>
+          <a href="#" class="btn ga-btn ga-btn-primary ga-btn-sm">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================== الهيرو (أول سكشن في الصفحة) ===================== -->
+    <section id="hero" class="ga-hero">
+      <div class="container">
+        <div class="row align-items-center gx-lg-5 gy-5">
+          <div class="col-lg-6 ps-lg-4">
+            <h1 class="ga-hero-title">
+              THE ULTIMATE <span class="text-lime">GAMING</span> EXPERIENCE
+            </h1>
+            <p class="ga-hero-text">
+              Join millions of gamers worldwide in the most competitive eSports tournaments.
+              Experience next-level gaming with cutting-edge technology and endless possibilities.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#latest-games" class="btn ga-btn ga-btn-primary ga-btn-lg">Start Gaming Now</a>
+              <a href="#" class="btn ga-btn ga-btn-outline ga-btn-lg">Watch Tournaments</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="ga-hero-visual">
+              <div class="ga-hero-frame">
+                <img src="assets/images/hero-img.png" alt="Professional eSports player gaming setup" class="img-fluid" />
+              </div>
+              <div class="ga-stat-card d-flex align-items-center gap-3">
+                <i class="bi bi-trophy"></i>
+                <div>
+                  <small class="d-block">Active Players</small>
+                  <strong>2.5M+</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== أحدث الألعاب (Carousel) ===================== -->
+    <section id="latest-games" class="ga-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="ga-eyebrow">OUR GAMES</span>
+          <h2 class="ga-title">Our Latest Games</h2>
+        </div>
+
+        <div id="gamesCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner">
+
+            <!-- الشريحة الأولى: 3 ألعاب -->
+            <div class="carousel-item active">
+              <div class="row ga-games-row">
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-1.png" alt="Two friendly green aliens on a red planet" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-controller"></i> Adventure</span>
+                        <span><i class="bi bi-people-fill"></i> Multiplayer</span>
+                      </div>
+                      <h3>Alien Companions</h3>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-2.png" alt="Red sports car racing through a neon tunnel" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-flag-fill"></i> Racing</span>
+                        <span><i class="bi bi-lightning-charge-fill"></i> Sci-Fi</span>
+                      </div>
+                      <h3>Cyber Run 2099</h3>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-3.png" alt="Starship flying over a green planet" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-controller"></i> Action</span>
+                        <span><i class="bi bi-gpu-card"></i> GeForce</span>
+                      </div>
+                      <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- الشريحة التانية: 3 ألعاب -->
+            <div class="carousel-item">
+              <div class="row ga-games-row">
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-4.png" alt="Armored knight standing on a cliff at sunset" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-controller"></i> RPG</span>
+                        <span><i class="bi bi-stars"></i> Fantasy</span>
+                      </div>
+                      <h3>Aetheria Chronicles</h3>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-5.png" alt="Armed soldiers advancing through a city street" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-bullseye"></i> Shooter</span>
+                        <span><i class="bi bi-people-fill"></i> Multiplayer</span>
+                      </div>
+                      <h3>Warfront Protocol</h3>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-6.png" alt="Football player kicking a ball in a stadium" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-dribbble"></i> Sports</span>
+                        <span><i class="bi bi-trophy-fill"></i> Football</span>
+                      </div>
+                      <h3>Shot Striker</h3>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- الشريحة التالتة: 3 ألعاب -->
+            <div class="carousel-item">
+              <div class="row ga-games-row">
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-7.png" alt="Neon eSports arena with big screens" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-trophy-fill"></i> eSports</span>
+                        <span><i class="bi bi-people-fill"></i> Competitive</span>
+                      </div>
+                      <h3>Epic Gaming League</h3>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-8.png" alt="Starship hovering over a barren alien world" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-rocket-takeoff-fill"></i> Exploration</span>
+                        <span><i class="bi bi-lightning-charge-fill"></i> Sci-Fi</span>
+                      </div>
+                      <h3>Barren Alien Worlds</h3>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="ga-game">
+                    <img src="assets/images/latest-games-9.png" alt="Armored sci-fi hero with a red cape" />
+                    <div class="ga-game-overlay">
+                      <div class="ga-tags">
+                        <span><i class="bi bi-controller"></i> Action</span>
+                        <span><i class="bi bi-shield-fill"></i> RPG</span>
+                      </div>
+                      <h3>Cloveland Quest</h3>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- أزرار الأسهم اللي بتحرّك الـ Carousel + زرار "VIEW ALL GAMES" -->
+        <div class="d-flex flex-wrap justify-content-center align-items-center ga-controls mt-5">
+          <button class="ga-circle-btn" type="button" data-bs-target="#gamesCarousel" data-bs-slide="prev" aria-label="Previous games">
+            <i class="bi bi-arrow-left"></i>
+          </button>
+          <button class="ga-circle-btn" type="button" data-bs-target="#gamesCarousel" data-bs-slide="next" aria-label="Next games">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+          <a href="#" class="btn ga-btn ga-btn-outline ga-btn-view">VIEW ALL GAMES</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== اللي بنقدّمه (What We Do) ===================== -->
+    <section id="what-we-do" class="ga-section ga-what">
+      <div class="container">
+        <div class="text-center ga-what-head">
+          <span class="ga-eyebrow">WHAT WE DO</span>
+          <h2 class="ga-title ga-title-lg">
+            <span class="ga-title-strong">More Than Just Games</span>
+            <span class="ga-title-light">We Build <span class="text-lime">Interactive</span> Journeys</span>
+          </h2>
+        </div>
+
+        <div class="row ga-services-row">
+          <div class="col-6 col-lg-3">
+            <article class="ga-service">
+              <span class="ga-service-icon"><i class="bi bi-display-fill"></i></span>
+              <h3>PC Game<br>Development</h3>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-service">
+              <span class="ga-service-icon"><i class="bi bi-phone-fill"></i></span>
+              <h3>Mobile Game<br>Development</h3>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="ga-service-img"><img src="assets/images/what-we-do-1.png" alt="Yellow game controller" loading="lazy" /></div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-service">
+              <span class="ga-service-icon"><i class="bi bi-headset-vr"></i></span>
+              <h3>AR/VR<br>Solutions</h3>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-service">
+              <span class="ga-service-icon"><i class="bi bi-boxes"></i></span>
+              <h3>AR/VR<br>Design</h3>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="ga-service-img"><img src="assets/images/what-we-do-2.png" alt="Cartoon superhero gamer mascot" loading="lazy" /></div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-service">
+              <span class="ga-service-icon"><i class="bi bi-playstation"></i></span>
+              <h3>PS4 Game<br>Development</h3>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-service">
+              <span class="ga-service-icon"><i class="bi bi-box-fill"></i></span>
+              <h3>3D<br>Modelings</h3>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- الخط الأخضر المنوّر اللي بيفصل بين الكروت وشريط الشعارات -->
+      <div class="ga-glow-line" aria-hidden="true"></div>
+
+      <!-- شريط الشعارات المتحرك: صفين بيتحركوا عكس بعض (الحركة نفسها في CSS) -->
+      <div class="ga-marquee" aria-label="Partner gaming squads">
+        <div class="ga-marquee-glow" aria-hidden="true"></div>
+        <div class="ga-marquee-rows">
+          <!-- بنكرّر الشعارات 3 مرات عشان الحركة تفضل مكمّلة من غير فراغ (النسخ المكررة عليها aria-hidden) -->
+          <ul class="ga-track ga-track-left">
+            <li><img src="assets/images/logo-2.jpg" alt="Gaming squad logo 2" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-3.jpg" alt="Gaming squad logo 3" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-4.jpg" alt="Gaming squad logo 4" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-5.jpg" alt="Gaming squad logo 5" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-6.jpg" alt="Gaming squad logo 6" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-7.jpg" alt="Gaming squad logo 7" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-8.jpg" alt="Gaming squad logo 8" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-9.jpg" alt="Gaming squad logo 9" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-10.jpg" alt="Gaming squad logo 10" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-11.jpg" alt="Gaming squad logo 11" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-12.jpg" alt="Gaming squad logo 12" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-1.jpg" alt="Gaming squad logo 1" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-2.jpg" alt="Gaming squad logo 2" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-3.jpg" alt="Gaming squad logo 3" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-4.jpg" alt="Gaming squad logo 4" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-5.jpg" alt="Gaming squad logo 5" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-6.jpg" alt="Gaming squad logo 6" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-7.jpg" alt="Gaming squad logo 7" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-8.jpg" alt="Gaming squad logo 8" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-9.jpg" alt="Gaming squad logo 9" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-10.jpg" alt="Gaming squad logo 10" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-11.jpg" alt="Gaming squad logo 11" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-12.jpg" alt="Gaming squad logo 12" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-1.jpg" alt="Gaming squad logo 1" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-2.jpg" alt="Gaming squad logo 2" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-3.jpg" alt="Gaming squad logo 3" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-4.jpg" alt="Gaming squad logo 4" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-5.jpg" alt="Gaming squad logo 5" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-6.jpg" alt="Gaming squad logo 6" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-7.jpg" alt="Gaming squad logo 7" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-8.jpg" alt="Gaming squad logo 8" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-9.jpg" alt="Gaming squad logo 9" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-10.jpg" alt="Gaming squad logo 10" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-11.jpg" alt="Gaming squad logo 11" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-12.jpg" alt="Gaming squad logo 12" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-1.jpg" alt="Gaming squad logo 1" width="120" height="120" loading="lazy" /></li>
+          </ul>
+          <ul class="ga-track ga-track-right">
+            <li><img src="assets/images/logo-7.jpg" alt="Gaming squad logo 7" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-8.jpg" alt="Gaming squad logo 8" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-9.jpg" alt="Gaming squad logo 9" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-10.jpg" alt="Gaming squad logo 10" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-11.jpg" alt="Gaming squad logo 11" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-12.jpg" alt="Gaming squad logo 12" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-1.jpg" alt="Gaming squad logo 1" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-2.jpg" alt="Gaming squad logo 2" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-3.jpg" alt="Gaming squad logo 3" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-4.jpg" alt="Gaming squad logo 4" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-5.jpg" alt="Gaming squad logo 5" width="120" height="120" loading="lazy" /></li>
+            <li><img src="assets/images/logo-6.jpg" alt="Gaming squad logo 6" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-7.jpg" alt="Gaming squad logo 7" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-8.jpg" alt="Gaming squad logo 8" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-9.jpg" alt="Gaming squad logo 9" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-10.jpg" alt="Gaming squad logo 10" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-11.jpg" alt="Gaming squad logo 11" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-12.jpg" alt="Gaming squad logo 12" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-1.jpg" alt="Gaming squad logo 1" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-2.jpg" alt="Gaming squad logo 2" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-3.jpg" alt="Gaming squad logo 3" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-4.jpg" alt="Gaming squad logo 4" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-5.jpg" alt="Gaming squad logo 5" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-6.jpg" alt="Gaming squad logo 6" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-7.jpg" alt="Gaming squad logo 7" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-8.jpg" alt="Gaming squad logo 8" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-9.jpg" alt="Gaming squad logo 9" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-10.jpg" alt="Gaming squad logo 10" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-11.jpg" alt="Gaming squad logo 11" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-12.jpg" alt="Gaming squad logo 12" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-1.jpg" alt="Gaming squad logo 1" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-2.jpg" alt="Gaming squad logo 2" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-3.jpg" alt="Gaming squad logo 3" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-4.jpg" alt="Gaming squad logo 4" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-5.jpg" alt="Gaming squad logo 5" width="120" height="120" loading="lazy" /></li>
+            <li aria-hidden="true"><img src="assets/images/logo-6.jpg" alt="Gaming squad logo 6" width="120" height="120" loading="lazy" /></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== فريق العمل (Our Team) ===================== -->
+    <section id="team" class="ga-section ga-team">
+      <div class="container">
+        <div class="text-center ga-team-head">
+          <span class="ga-eyebrow">OUR TEAM</span>
+          <h2 class="ga-title">Our Best Team Members</h2>
+          <p class="ga-subtitle">Meet the professional gamers and experts behind our success</p>
+        </div>
+
+        <div class="row ga-team-row">
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-1.png" alt="Alex Chen wearing a headset" loading="lazy" />
+              <!-- الطبقة دي هي اللي بتخلّي الصورة أبيض وأسود بـ backdrop-filter (البونص) -->
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>Alex &quot;Phantom&quot;<br>Chen</h3>
+                  <p class="ga-member-role">Pro Player - VALORANT</p>
+                  <p class="ga-member-sub">World Champion 2023</p>
+                </div>
+                <span class="ga-member-nick">PHANTOM</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-2.png" alt="Ali Ahmed smiling in a navy hoodie" loading="lazy" />
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>Ali &quot;Nova&quot; Ahmed</h3>
+                  <p class="ga-member-role">Pro Player - League of Legends</p>
+                  <p class="ga-member-sub">MVP 2023 Season</p>
+                </div>
+                <span class="ga-member-nick">NOVA</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-3.png" alt="Marcus Rodriguez in an eSports jacket" loading="lazy" />
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>Marcus &quot;Viper&quot;<br>Rodriguez</h3>
+                  <p class="ga-member-role">Head Coach - CS:GO</p>
+                  <p class="ga-member-sub">5x Major Winner</p>
+                </div>
+                <span class="ga-member-nick">VIPER</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-4.png" alt="Seif Usama in a green hoodie" loading="lazy" />
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>Seif &quot;Saga&quot; Usama</h3>
+                  <p class="ga-member-role">Strategic Analyst</p>
+                  <p class="ga-member-sub">Data Science Expert</p>
+                </div>
+                <span class="ga-member-nick">SAGA</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-5.png" alt="Jake Wilson in profile wearing headphones" loading="lazy" />
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>Jake &quot;Storm&quot;<br>Wilson</h3>
+                  <p class="ga-member-role">Pro Player - Apex Legends</p>
+                  <p class="ga-member-sub">Rising Star 2023</p>
+                </div>
+                <span class="ga-member-nick">STORM</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-6.png" alt="David Park in an orange hoodie" loading="lazy" />
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>David &quot;Titan&quot; Park</h3>
+                  <p class="ga-member-role">Team Captain - Dota 2</p>
+                  <p class="ga-member-sub">The International Winner</p>
+                </div>
+                <span class="ga-member-nick">TITAN</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-7.png" alt="Khaled Ali in a grey hoodie" loading="lazy" />
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>Khaled &quot;Phoenix&quot;<br>Ali</h3>
+                  <p class="ga-member-role">Content Creator</p>
+                  <p class="ga-member-sub">2M+ Followers</p>
+                </div>
+                <span class="ga-member-nick">PHOENIX</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ga-member">
+              <img src="assets/images/avatar-8.png" alt="Ryan Miller in a red blazer" loading="lazy" />
+              <span class="ga-member-gray" aria-hidden="true"></span>
+              <div class="ga-member-info">
+                <div class="ga-member-text">
+                  <h3>Ryan &quot;Ghost&quot;<br>Miller</h3>
+                  <p class="ga-member-role">Team Manager</p>
+                  <p class="ga-member-sub">Operations Lead</p>
+                </div>
+                <span class="ga-member-nick">GHOST</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== تواصل معانا (Contact Us) ===================== -->
+    <section id="contact" class="ga-section ga-contact">
+      <div class="container">
+        <div class="text-center ga-contact-head">
+          <span class="ga-eyebrow">CONTACT US</span>
+          <h2 class="ga-title">Get In Touch</h2>
+          <p class="ga-subtitle">Have questions or need support? We're here to help!</p>
+        </div>
+
+        <div class="row ga-contact-row align-items-start">
+          <!-- العمود الشمال: كروت بيانات التواصل + كارت المجتمع -->
+          <div class="col-lg-6">
+            <div class="ga-contact-col">
+              <article class="ga-info-card">
+                <span class="ga-info-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <div>
+                  <h3>Our Location</h3>
+                  <p>123 Gaming Street, Esports City, EC 12345</p>
+                </div>
+              </article>
+
+              <article class="ga-info-card">
+                <span class="ga-info-icon"><i class="bi bi-telephone-fill"></i></span>
+                <div>
+                  <h3>Phone Number</h3>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </article>
+
+              <article class="ga-info-card">
+                <span class="ga-info-icon"><i class="bi bi-envelope-fill"></i></span>
+                <div>
+                  <h3>Email Address</h3>
+                  <p>contact@gamearena.com</p>
+                </div>
+              </article>
+
+              <article class="ga-community">
+                <h3>Join Our Community</h3>
+                <p>Connect with us on social media for the latest updates</p>
+                <div class="ga-social">
+                  <a href="#" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                  <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- العمود اليمين: فورم إرسال الرسالة -->
+          <div class="col-lg-6">
+            <form class="ga-form" action="#" method="post">
+              <h3 class="ga-form-title">Send us a Message</h3>
+
+              <div class="row g-3 g-lg-4 mb-form">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Your first name" required />
+                </div>
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Your last name" required />
+                </div>
+              </div>
+
+              <div class="mb-form">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required />
+              </div>
+
+              <div class="mb-form">
+                <label for="subject" class="form-label">Subject</label>
+                <select class="form-select" id="subject" name="subject">
+                  <option selected>General Inquiry</option>
+                  <option>Tournament Support</option>
+                  <option>Technical Issue</option>
+                  <option>Partnership</option>
+                  <option>Media Request</option>
+                </select>
+              </div>
+
+              <div class="mb-form">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+              </div>
+
+              <div class="form-check ga-check">
+                <input class="form-check-input" type="checkbox" value="" id="newsletter" name="newsletter" />
+                <label class="form-check-label" for="newsletter">Subscribe to our newsletter for gaming updates</label>
+              </div>
+
+              <button type="submit" class="btn ga-btn ga-btn-primary ga-send">
+                Send Message <i class="bi bi-send-fill"></i>
+              </button>
+
+              <div class="ga-stats">
+                <div>
+                  <strong>24/7</strong>
+                  <span>Support Available</span>
+                </div>
+                <div>
+                  <strong>&lt;1hr</strong>
+                  <span>Average Response</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== الفوتر ===================== -->
+  <footer class="ga-footer">
+    <div class="container">
+      <div class="row ga-footer-row">
+        <div class="col-12 col-lg-3">
+          <a class="ga-brand d-inline-flex align-items-center gap-2" href="#hero">
+            <i class="bi bi-controller"></i>
+            <span>GameArena</span>
+          </a>
+          <p class="ga-footer-text">The ultimate destination for competitive gaming, esports tournaments, and gaming community.</p>
+          <div class="ga-footer-social">
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h4 class="ga-footer-title">Games</h4>
+          <ul class="ga-footer-links">
+            <li><a href="#">VALORANT</a></li>
+            <li><a href="#">League of Legends</a></li>
+            <li><a href="#">CS:GO</a></li>
+            <li><a href="#">Dota 2</a></li>
+            <li><a href="#">Apex Legends</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h4 class="ga-footer-title">Tournaments</h4>
+          <ul class="ga-footer-links">
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">Live Matches</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Rankings</a></li>
+            <li><a href="#">Schedule</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h4 class="ga-footer-title">Support</h4>
+          <ul class="ga-footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Bug Reports</a></li>
+            <li><a href="#">Feature Requests</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ga-footer-bottom">
+        <p>&copy; 2025 GameArena. All rights reserved.</p>
+        <div class="ga-footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
